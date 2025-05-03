@@ -1,0 +1,7 @@
+<section class="comments">
+    <h2>Comentários</h2>
+    <div *ngFor="let c of comments; trackBy: trackByIndex" class="comment">
+      <strong>{{ c.user }}</strong> {{ c.message }} ({{ c.date }})
+    </div>
+  </section>
+  

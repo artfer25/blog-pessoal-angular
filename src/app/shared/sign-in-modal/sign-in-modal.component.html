@@ -1,0 +1,26 @@
+<!-- <div class="modal-background">
+    <div class="modal-content">
+      <button class="close-button" (click)="fecharModal()">X</button>
+      <h2>Criar Conta</h2>
+      <form (submit)="cadastrar()">
+        <input type="text" placeholder="Nome de usuário" [(ngModel)]="usuario" name="usuario" required />
+        <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required />
+        <input type="password" placeholder="Senha" [(ngModel)]="senha" name="senha" required />
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+   -->
+   <div class="modal-overlay" (click)="fecharModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="modal-close" (click)="fecharModal()">X</button>
+      <h2>Cadastres-se</h2>
+      <form>
+        <input type="text" placeholder="Nome de usuário" [(ngModel)]="usuario" name="usuario" required />
+        <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required />
+        <input type="password" placeholder="Senha" [(ngModel)]="senha" name="senha" required />
+        <button type="submit">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+  

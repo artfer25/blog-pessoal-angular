@@ -1,0 +1,13 @@
+<nav class="main-nav">
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+      <li><a routerLink="/sobre" routerLinkActive="active">Sobre</a></li>
+      <li><a routerLink="/postagens" routerLinkActive="active">Postagens</a></li> 
+    </ul>
+    <div class="auth-buttons">
+      <button (click)="notificarLogin()">Login</button>
+      <button (click)="signInClick.emit()">Sign Up</button>
+    </div>
+    
+  </nav>
+  

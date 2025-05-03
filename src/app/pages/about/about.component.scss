@@ -1,0 +1,58 @@
+.about {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #2c2e4a; // tom escuro elegante
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: #e5e5f1;
+    font-family: 'Segoe UI', sans-serif;
+  
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #b5bdfb;
+      font-weight: bold;
+    }
+  
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-top: 1rem;
+      color: #ccc;
+    }
+  
+    ul {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+  
+      li {
+        margin-bottom: 0.8rem;
+        font-size: 1rem;
+        line-height: 1.6;
+  
+        strong {
+          color: #b5bdfb;
+        }
+      }
+    }
+  
+    strong {
+      font-weight: 600;
+      color: #b5bdfb;
+    }
+  
+    @media (max-width: 600px) {
+      padding: 1.5rem;
+  
+      h1 {
+        font-size: 1.5rem;
+      }
+  
+      p,
+      ul li {
+        font-size: 0.95rem;
+      }
+    }
+  }
+  
