@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PostService } from '../../services/post.service';
 
 @Component({
   selector: 'app-post-list',
@@ -8,20 +9,19 @@ import { CommonModule } from '@angular/common';
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.scss']
 })
-export class PostListComponent {
-  posts = [
-    {
-      title: 'Como melhorar sua produtividade com Angular',
-      description: 'Dicas práticas e rápidas para organizar seu código e ser mais eficiente.',
-      author: 'Henrique Araújo',
-      date: '30/04/2025'
-    },
-    {
-      title: 'Entendendo Standalone Components',
-      description: 'O que são, como funcionam e por que você deve adotá-los no Angular moderno.',
-      author: 'Henrique Araújo',
-      date: '29/04/2025'
-    }
-  ];
+export class PostListComponent implements OnInit {
+  posts: any[] = [];
+
+  constructor(private postService: PostService) {}
+
+  ngOnInit(): void {
+    this.postService.getPosts().subscribe({
+      next: (data) => {
+        this.posts = data;
+      },
+      error: (err) => {
+        console.error('Erro ao carregar posts:', err);
+      }
+    });
+  }
 }
-``

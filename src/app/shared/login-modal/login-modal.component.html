@@ -1,12 +1,14 @@
-<div class="modal-overlay" (click)="fecharModal()">
-    <div class="modal-content" (click)="$event.stopPropagation()">
-      <button class="modal-close" (click)="fecharModal()">X</button>
-      <h2>Login</h2>
-      <form>
-        <input type="text" placeholder="Usuário" />
-        <input type="password" placeholder="Senha" />
-        <button type="submit">Entrar</button>
-      </form>
-    </div>
+<div *ngIf="mostrar" class="modal">
+  <div class="modal-content">
+    <h2>Login</h2>
+
+    <label>Usuário:</label>
+    <input type="text" [(ngModel)]="username" />
+
+    <label>Senha:</label>
+    <input type="password" [(ngModel)]="password" />
+
+    <button (click)="login()">Entrar</button>
+    <button (click)="fecharModal()">Cancelar</button>
   </div>
-  
+</div>
