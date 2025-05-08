@@ -47,22 +47,22 @@ export class AuthService {
     localStorage.setItem('authToken', token);
   }
 
-  // Obter token
+  
   getToken(): string | null {
     return localStorage.getItem('authToken');
   }
 
-  // Remover token
+  
   clearToken(): void {
     localStorage.removeItem('authToken');
   }
 
-  // Verificar login
+  
   isLoggedIn(): boolean {
     return this.getToken() !== null;
   }
 
-  // Logout
+
   logout(): void {
     this.clearToken();
  

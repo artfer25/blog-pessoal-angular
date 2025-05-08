@@ -9,10 +9,15 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./main-header.component.scss']
 })
 export class MainHeaderComponent {
+
   @Output() loginClick = new EventEmitter<void>();
   notificarLogin() {
     this.loginClick.emit();
   }
-  @Output() signInClick = new EventEmitter<void>();
-}
 
+@Output() signInClick = new EventEmitter<void>();
+
+notificarSignIn() {
+  this.signInClick.emit();
+}
+}
