@@ -1,5 +1,17 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './interceptors/token.interceptor';
+import { NgModule } from '@angular/core';
+NgModule({
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ]
+})
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },

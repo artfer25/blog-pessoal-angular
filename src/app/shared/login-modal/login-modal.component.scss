@@ -1,75 +1,95 @@
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); // fundo escuro semi-transparente
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-  }
-  
-  .modal-content {
-    background-color: #2c2c4a;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    width: 90%;
-    max-width: 400px;
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6); // fundo escuro translúcido
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #27293d;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  h2 {
+    margin-bottom: 1.5rem;
     text-align: center;
-    position: relative;
+    font-size: 1.5rem;
   }
-  
-  .modal-content h2 {
-    margin-bottom: 1rem;
-    color: #c0c5f9;
+
+  label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
   }
-  
-  .modal-content form {
+
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border-radius: 6px;
+    border: none;
+    background-color: #1f2033;
+    color: #fff;
+  }
+
+  .actions {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+
+    button {
+      flex: 1;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
   }
-  
-  .modal-content input {
-    background-color: #1e1e2e;
-    color: #eee;
-    border: 1px solid #44445a;
-    border-radius: 4px;
+ .actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  .btn {
+    width: 100%;
     padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: 600;
     font-size: 1rem;
-  }
-  
-  .modal-content button[type="submit"] {
-    background-color: #7289da;
-    color: #fff;
-    border: none;
-    padding: 0.75rem;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .modal-content button[type="submit"]:hover {
-    background-color: #5b6eae;
-  }
-  
-  .modal-close {
-    position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
-    background: transparent;
-    color: #aaa;
-    font-size: 1.25rem;
     border: none;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: background 0.3s ease;
+
+    &.primary {
+      background: #7289da;
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+      &:hover {
+        background: #7289da;
+        color: #fff;
+      }
+    }
+
+    &.secondary {
+      background-color: #2d2e41;
+      color: #fff;
+
+      &:hover {
+        background-color: #40415a;
+      }
+    }
   }
-  
-  .modal-close:hover {
-    color: #fff;
-  }
-  
+}
+}

@@ -1,6 +1,6 @@
 <app-main-header (loginClick)="abrirModal()" (signInClick)="abrirSignIn()"></app-main-header>
 
-<app-login-modal *ngIf="mostrarModal" (fechar)="fecharModal()"></app-login-modal>
+<app-login-modal [mostrar]="mostrarModal" (fechar)="fecharModal()"></app-login-modal>
 <app-sign-in-modal *ngIf="mostrarSignIn" (fechar)="fecharSignIn()"></app-sign-in-modal>
 
 <router-outlet></router-outlet>

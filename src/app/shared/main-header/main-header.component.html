@@ -5,8 +5,8 @@
       <li><a routerLink="/postagens" routerLinkActive="active">Postagens</a></li> 
     </ul>
     <div class="auth-buttons">
-      <button (click)="notificarLogin()">Login</button>
-      <button (click)="notificarSignIn()">Sign Up</button>>
+     <button (click)="loginClick.emit()" class="btn">Login</button>
+    <button (click)="signInClick.emit()" class="btn alt">Sign Up</button>
     </div>
     
   </nav>

@@ -1,18 +1,13 @@
 import { Component } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [],
-  // animations: [
-  //   trigger('fadeIn', [
-  //     transition(':enter', [
-  //       style({ opacity: 0, transform: 'translateY(-20px)' }),
-  //       animate('800ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))
-  //     ])
-  //   ])
-  // ],
+  imports: [CommonModule, RouterModule],
+
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.scss']
 })
