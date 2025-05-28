@@ -2,15 +2,15 @@
   <div class="modal-content">
     <h2>Login</h2>
 
-    <label>Usuário:</label>
-    <input type="text" [(ngModel)]="username" />
+    <label for="username">Usuário:</label>
+    <input id="username" type="text" [(ngModel)]="username" />
 
-    <label>Senha:</label>
-    <input type="password" [(ngModel)]="password" />
+    <label for="password">Senha:</label>
+    <input id="password" type="password" [(ngModel)]="password" />
 
     <div class="actions">
-      <button (click)="login()">Entrar</button>
-      <button (click)="fecharModal()">Cancelar</button>
+      <button class="btn primary" (click)="login()">Entrar</button>
+      <button class="btn secondary" (click)="fecharModal()">Cancelar</button>
     </div>
   </div>
 </div>
